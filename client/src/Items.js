@@ -85,7 +85,7 @@ class Items extends Component {
                                                                 {" " + item.last_updated}
                                                                 <button id={item.item_code} type="button"
                                                                     class={this.state.status_ref[item.status].style}
-                                                                    onDoubleClick={() => this.update_status(index)}><b class="text-white">{this.state.status_ref[item.status].label}</b></button>
+                                                                    onClick={() => this.update_status(index)}><b class="text-white">{this.state.status_ref[item.status].label}</b></button>
                                                             </div>
                                                         </div>
                                                         <br></br>
