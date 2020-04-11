@@ -68,7 +68,7 @@ class Items extends Component {
             <div>
                 <section>
                     <div>
-                        <div class="container m2">
+                        <div class="container">
                             {this.state.item_category.map((category, c_index) => (
                                 <div>
                                     <br></br>
@@ -77,10 +77,9 @@ class Items extends Component {
                                         {this.state.item_states.map((item, index) => (
                                             <div>
                                                 {(item.category_code === category.category_code) &&
-                                                    <div class="col-lg">
-                                                        <div class="container border border-primary">
-                                                            <h4>{item.name}</h4>
-                                                            <span class="text-white">{"".padStart(25, "-")}</span>
+                                                    <div class="col-md">
+                                                        <div class="bg-light">
+                                                            <h5>{item.name}</h5> 
                                                             <div class="text-muted" >
                                                                 {" " + item.last_updated}
                                                                 <button id={item.item_code} type="button"
