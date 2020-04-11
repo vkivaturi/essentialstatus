@@ -79,7 +79,8 @@ class Items extends Component {
                                                 {(item.category_code === category.category_code) &&
                                                     <div class="col-md">
                                                         <div class="bg-light">
-                                                            <h5>{item.name}</h5> 
+                                                            <h5>{item.name}</h5>
+                                                            <span class="text-white">{"".padStart(20, "-")}</span>
                                                             <div class="text-muted" >
                                                                 {" " + item.last_updated}
                                                                 <button id={item.item_code} type="button"
