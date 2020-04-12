@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import * as Icon from 'react-bootstrap-icons';
 
 class Items extends Component {
 
@@ -73,7 +74,8 @@ class Items extends Component {
                             {this.state.item_category.map((category, c_index) => (
                                 <div>
                                     <br></br>
-                                    <h3 class="text-white bg-dark margin-1">{category.name}</h3>
+                                    <h3 class="text-dark margin-1"><Icon.Exclude color="royalblue" size={25} /> {category.name}</h3>
+                                    <hr></hr>
                                     <div class="row">
                                         {this.state.item_states.map((item, index) => (
                                             <div>
