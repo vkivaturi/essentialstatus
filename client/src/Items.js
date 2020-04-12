@@ -31,11 +31,11 @@ class Items extends Component {
 
     componentDidMount() {
         //Load all items from database
-        fetch('/categories')
+        fetch('/api/categories')
             .then(res => res.json())
             .then(item_category => this.setState({ item_category }));
 
-        fetch('/items')
+        fetch('/api/items')
             .then(res => res.json())
             .then(item_states => this.setState({ item_states }));
 
@@ -52,8 +52,9 @@ class Items extends Component {
 
         //Make a waiting call to update the status and fetch the updated time        
         const request = async () => {
-            const response = await fetch('/item/' + item_states[index].item_code + '/update/status/' + new_status);
+            const response = await fetch('/api/item/' + item_states[index].item_code + '/update/status/' + new_status);
             const item = await response.json();
+            
             item_states[index].status = item.status;
             item_states[index].last_updated = item.last_updated;
             this.setState({ item_states });
