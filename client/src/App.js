@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Items from './Items.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Navbar, Nav } from 'react-bootstrap';
 
 class App extends React.Component {
 
@@ -16,24 +17,18 @@ class App extends React.Component {
 
     return (
       <div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="#">          
-                <img src="ACL.png" width="60" height="60" alt="" />
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Sampoorna store <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Vegetable vendor</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+          <Navbar.Brand href="#home">            <img src="ACL.png" width="60" height="60" alt="" />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="mr-auto">
+              <Nav.Link href="#sampoorna">Sampoorna store</Nav.Link>
+              <Nav.Link href="#other">Vegetable vendor</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+
 
         <div class="container">
           <div class="row">
@@ -43,7 +38,7 @@ class App extends React.Component {
               <div class="row" >
                 <div class="container margin-5">
                   <br></br>
-                <h4 class="text-primary">Crowd sourcing. Essential items availability status </h4>
+                  <h4 class="text-primary">Crowd sourcing. Essential items availability status </h4>
                   <Items />
                 </div>
               </div>
