@@ -24,7 +24,6 @@ class App extends React.Component {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link href="#sampoorna">Sampoorna store</Nav.Link>
-              <Nav.Link href="#other">Vegetable vendor</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
