@@ -37,7 +37,8 @@ class App extends React.Component {
               <div class="row" >
                 <div class="container margin-5">
                   <br></br>
-                  <h4 class="text-primary">Crowd sourcing. Essential items availability status </h4>
+                  <h4 class="text-primary">Availability of essential items in Sampoorna Store</h4>
+                  <h6 class="text-danger">Please update this page responsibly. 800+ residents benefit from your actions</h6>
                   <Items />
                 </div>
               </div>
